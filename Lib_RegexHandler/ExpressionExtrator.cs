@@ -75,12 +75,12 @@ namespace Lib_RegexHandler
         /// </summary>
         /// <param name="text">Text use to find the ocorrense of the expression</param>
         /// <returns>Return the full expression with the ocorrence</returns>
-        public string GetRegexResult(string text)
+        public string GetFullRegexResult(string text)
         {
             string regexResult = new Regex(FullExpression).Match(text).ToString();
             try
             {
-                return regexResult.Replace(StartExpression, "").Replace(EndExpression, "");
+                return regexResult;
             }
             catch (ArgumentNullException ex)
             {
@@ -90,6 +90,15 @@ namespace Lib_RegexHandler
             {
                 throw ex;
             }
+        }
+        /// <summary>
+        /// Function to return the first ocorrense of the regular expression in a text, it will remove the start and the end of expression
+        /// </summary>
+        /// <param name="text">Text use to find the ocorrense of the expression</param>
+        /// <returns>Return the regular expression with the ocorrence</returns>
+        public string GetRegexExpression(string text)
+        {
+            return GetFullRegexResult(text).Replace(StartExpression, "").Replace(EndExpression, "");
         }
     }
 }

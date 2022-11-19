@@ -26,6 +26,12 @@
         /// </summary>
         /// <param name="text">Text use to find the ocorrense of the expression</param>
         /// <returns>Return the full expression with the ocorrence</returns>
-        string GetRegexResult(string text);
+        string GetFullRegexResult(string text);
+        /// <summary>
+        /// Function to return the first ocorrense of the regular expression in a text, it will remove the start and the end of expression
+        /// </summary>
+        /// <param name="text">Text use to find the ocorrense of the expression</param>
+        /// <returns>Return the regular expression with the ocorrence</returns>
+        string GetRegexExpression(string text);
     }
 }
