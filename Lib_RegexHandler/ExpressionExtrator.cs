@@ -75,7 +75,7 @@ namespace Lib_RegexHandler
         /// </summary>
         /// <param name="text">Text use to find the ocorrense of the expression</param>
         /// <returns>Return the full expression with the ocorrence</returns>
-        public string RegexResult(string text)
+        public string GetRegexResult(string text)
         {
             string regexResult = new Regex(FullExpression).Match(text).ToString();
             try

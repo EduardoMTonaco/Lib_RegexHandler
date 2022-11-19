@@ -26,6 +26,6 @@
         /// </summary>
         /// <param name="text">Text use to find the ocorrense of the expression</param>
         /// <returns>Return the full expression with the ocorrence</returns>
-        string RegexResult(string text);
+        string GetRegexResult(string text);
     }
 }
